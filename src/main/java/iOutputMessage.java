@@ -1,3 +1,4 @@
 public interface iOutputMessage {
-    public String theOutput(int numTries);
+    public String roundOutput(int numTries);
+    public String gameOutput(int numTries);
 }

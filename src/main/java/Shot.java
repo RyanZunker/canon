@@ -4,13 +4,13 @@ public class Shot implements iShot{
 
     @Override
     public int convertShotToXCord(int angle, int velocity) {
-        double temp = velocity * Math.cos(angle);
+        double temp = velocity * Math.cos(Math.toRadians(angle));
         int value = (int)Math.round(temp);
         return value;
     }
 
     public int convertShotToYCord(int angle, int velocity){
-        double temp = velocity * Math.sin(angle);
+        double temp = velocity * Math.sin(Math.toRadians(angle));
         int value = (int)Math.round(temp);
         return value;
     }
@@ -29,4 +29,8 @@ public class Shot implements iShot{
 
     }
 
+    @Override
+    public void printLocation() {
+        System.out.println("The shot landed at " + getX() + "," + getY());
+    }
 }

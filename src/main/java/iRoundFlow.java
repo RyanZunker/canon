@@ -1,6 +1,7 @@
 import java.io.IOException;
 
-public interface iFlowClass {
+public interface iRoundFlow {
     public void start() throws IOException;
     Target target = new Target();
+    public int getRoundScore();
 }

@@ -11,19 +11,19 @@ public class testFlow {
     public void onInitializationIsTargetCreated(){
         //given the game started
         //when we create flow class
-        iFlowClass flow = new FlowClass();
+        iRoundFlow flow = new RoundFlow();
         //then we create a target
         assertTrue(flow.target instanceof Target);
     }
-    /*@Test
+    @Test
     public void onStartGetInputCalled() throws IOException {
         //given the game started
         //when we create flow class and call start
-        iFlowClass flow = new FlowClass();
+        iRoundFlow flow = new RoundFlow();
         iGetInput getInput = mock(GetInput.class);
         given(getInput.getTheInput()).willReturn("hi");
         //then we create a target
         verify(getInput, times(2)).getTheInput();
-    }*/
+    }
 
 }
